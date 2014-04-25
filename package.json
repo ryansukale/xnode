@@ -1,0 +1,21 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "dependencies": {
+  	"express":"*",
+		"underscore":"*",
+		"multiparty":"*",
+		"octonode":"*",
+		"async":"*",
+		"mysql":"*",
+		"randomstring":"*",
+		"dateformat":"*"
+  },
+	"devDependencies":{
+		"nodemon":"*"
+	}
+}
