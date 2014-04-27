@@ -2,9 +2,8 @@
  * Module dependencies.
  */
 
-var express = require('express');
-
 //Global variables : Since they are not declared using the var keyword
+express = require('express'),
 rootDir = __dirname,
 config = require('./config'),
 http = require('http'),
@@ -26,7 +25,7 @@ app.use(bodyParser());
 app.use(methodOverride());
 app.use(cookieParser());
 app.use(session({secret: config.SESSION_SECRET}));
-app.use(serveStatic('public'));
+app.use(express.static(__dirname + '/public'));
 
 
 // development only
@@ -46,4 +45,4 @@ http.createServer(app).listen(app.get('port'), function(){
 });
 
 //http://goo.gl/RNFPlJ
-//routes = require('./routes');
+routes = require('./routes');
