@@ -2,3 +2,4 @@
 // require them here
 require('./main');
 require('./users');
+require('./uploadRoutes');

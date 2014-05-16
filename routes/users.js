@@ -7,10 +7,18 @@ _ = require('underscore');
 
 var users = express.Router();
 
+users.use(function(req, res, next) {
+  
+  // Logic that is common to all the routes
+  console.log(req.method + ':' + req.url); // Basic logging
+  next();
+
+});
+
 // Define all of your handler functions here
 function getAllUsers(req,res,next){
-	console.log(req.method + ':' + req.url); // Basic logging
-	var returnObj = {};
+
+	var returnObj = {'hey':10};
 
 	res.json(returnObj);
 }
